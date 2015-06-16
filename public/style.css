@@ -30,3 +30,13 @@ ul.chatlines {
   background-color: #ccc;
   min-height: 50px;
 }
+
+ul.chatlines li {
+  list-style-type: none;
+}
+.nick {
+  font-weight: bold;
+}
+.action {
+  font-style: italic;
+}

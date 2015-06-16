@@ -1,6 +1,7 @@
 <html>
   <head>
     <title>GAChat with web sockets</title>
+    <script src="/socket.io/socket.io.js"> </script>
     <script src="/jquery.js"></script>
     <script src="/app.js"></script>
     <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.1/mustache.js'></script>
@@ -18,7 +19,15 @@
       <input type="text" id="text" placeholder="Enter text here" disabled="disabled"/>
       <input type="submit" value="Speak!" disabled="disabled" />
     </form>
+    <div class="actions">
+      <button data-type="trout">Troutslap</button>
+      <button data-type="rofl">Rofl</button>
+      <button data-type="sad">:'(</button>
+      <button data-type="boost">Boost</button>
+    </div>
 
 
   </body>
+
+
 </html>
