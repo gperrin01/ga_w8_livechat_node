@@ -1,9 +1,13 @@
+// THIS IS THE SERVER
+
 var express = require('express'); // Use the express library. 
 var app = express(); // Create our app. 
 
 var http = require('http');
 server = http.createServer(app); // Create an HTTP server.
-server.listen(process.env.PORT || 4000); // Listen on the default port, or on 4000 if there's not one.
+server.listen(process.env.PORT || 4000, function(){
+  console.log('listening on port', process.env.PORT || 4000);
+}); // Listen on the default port, or on 4000 if there's not one.
 
 // app.use('/static', express.static(__dirname + '/public')); 
 // this wasnt workning! I used the below
@@ -25,10 +29,9 @@ var io = require('socket.io').listen(server);
 
 io.sockets.on('connection', function(socket) {
 
+  // this is actually emitted by default by Socket upon connection
   socket.emit('connected');
 
-  // should the below be here, or inside its on io.socket.on?? 
-  
   // why is writeLine here and not in app.js, as is the function saying what we do when connected?
   socket.on('chat', function(data) {
     // writeLine(data.name, data.line);
@@ -39,7 +42,7 @@ io.sockets.on('connection', function(socket) {
     socket.broadcast.emit('action', data);
   });
 
-}); // end server ents on connection to a socket
+}); // end server events on connection to a socket
 
 
 
