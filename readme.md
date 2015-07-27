@@ -1,5 +1,6 @@
-this is in essence very annoying. All I've been doing for the past 45 minutes is copy a series of instructions for configurations and making several additions because additional lines of code were needed.
+A nice simple chat that's working can serve as backbone for a more complex one. 
+Our second Node/Express homework, which should be looked at for reference rather than the first one.
+This time learning how to use Socket.io and adding an http Server
 
-in the lab we call index what we call app here, and vice versa - great for clarity
-
-I dislike this code-along approach where we copy what has to be done without being told how it works and wy. I feel like I can't reproduce it myself without explanation. You give us all the steps so my mind switches on automatic mode and I cannot think for myself
+The homework was quite frustrating as we had to follow along instructions, which sometimes makes me do things in an automated way instead of taking the time to understand what happens. I'm glad I went back to it later to ensure I had the socket logic clearer.
+In a way the good thing was that some of the instructions were not clear, or mistaken, and so I had to dig deeper to be able to make the thing work
